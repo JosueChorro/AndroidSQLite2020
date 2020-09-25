@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.example.ejercicio_sqlite.MainActivity">
+    <item
+            android:id="@+id/action_limpiar"
+            android:icon="@drawable/ic_limpiar"
+            android:orderInCategory="100"
+            android:title="@string/limpiar"
+            app:showAsAction="never" />
+    <item
+            android:id="@+id/action_listarArticulos"
+            android:title="@string/listar" />
+    <item
+            android:id="@+id/action_listarArticulos1"
+            android:title="@string/listardos" />
+</menu>
