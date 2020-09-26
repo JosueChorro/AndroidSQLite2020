@@ -84,9 +84,10 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Snackbar.make(view, ”Replace with your own action”, Snackbar. LENGTH LONG)
-                //	. setAction(”Action”, null). show(),
+                // Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                // .setAction("Action", null).show();
                 ventanas.Search(MainActivity.this);
+                //MainActivity.this.finish();
             }
         });
 
@@ -168,6 +169,10 @@ public class MainActivity extends AppCompatActivity {
         }else if(id == R.id.action_listarArticulos1) {
             Intent listViewActivity = new Intent(MainActivity.this, ListViewArticulos.class);
             startActivity(listViewActivity);
+            return true;
+        }else if(id == R.id.recycler) {
+            Intent re = new Intent(MainActivity.this, ConsultaRecyclerView.class);
+            startActivity(re);
             return true;
         }
 

@@ -16,7 +16,7 @@ import android.widget.Toast;
 public class Modal {
     Dialog myDialog;
     AlertDialog.Builder dialogo;
-    boolean validalnput = false;
+    boolean validaInput = false;
     String codigo;
     String descripcion;
     String precio;
@@ -24,36 +24,34 @@ public class Modal {
     SQLiteDatabase bd = null;
     Dto datos = new Dto();
 
-    public void Search(final Context context) {
+    public void Search(final Context context){
         myDialog = new Dialog(context);
         myDialog.setContentView(R.layout.ventana1);
         myDialog.setTitle("Search");
         myDialog.setCancelable(false);
         final Base conexion = new Base(context);
-        final EditText et_cod = (EditText) myDialog.findViewById(R.id.ventana_codigo);
-        Button btn_buscar = (Button) myDialog.findViewById(R.id.btn_buscar);
-        TextView tv_close = (TextView) myDialog.findViewById(R.id.tv_close);
+        final EditText et_cod = (EditText)myDialog.findViewById(R.id.ventana_codigo);
+        Button btn_buscar = (Button)myDialog.findViewById(R.id.btn_buscar);
+        TextView tv_close = (TextView)myDialog.findViewById(R.id.tv_close);
         tv_close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 myDialog.dismiss();
             }
         });
-
         btn_buscar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (et_cod.getText().toString().length() == 0) {
-                    validalnput = false;
+                if(et_cod.getText().toString().length()==0){
+                    validaInput = false;
                     et_cod.setError("Campo obligatorio");
-                } else {
-                    validalnput = true;
+                }else{
+                    validaInput = true;
                 }
-
-                if (validalnput == true) {
+                if(validaInput) {
                     String cod = et_cod.getText().toString();
                     datos.setCodigo(Integer.parseInt(cod));
-                    if (conexion.consultaCodigo(datos) == true) {
+                    if(conexion.consultaCodigo(datos)){
                         codigo = String.valueOf(datos.getCodigo());
                         descripcion = datos.getDescripcion();
                         precio = String.valueOf(datos.getPrecio());
@@ -65,15 +63,16 @@ public class Modal {
                         intent.putExtra("precio", precio);
                         context.startActivity(intent);
                         myDialog.dismiss();
-                    } else {
+                    }else{
                         Toast.makeText(context, "No se han encontrado resultados para la busqueda especificada.", Toast.LENGTH_SHORT).show();
                     }
-                } else {
+                }else{
                     Toast.makeText(context, "No ha especificado lo que desea buscar.", Toast.LENGTH_SHORT).show();
-                    myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                    myDialog.show();
                 }
             }
         });
+        myDialog.getWindow().setBackgroundDrawable(new
+                ColorDrawable(Color.TRANSPARENT));
+        myDialog.show();
     }
 }

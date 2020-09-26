@@ -18,8 +18,7 @@
     <Button android:id="@+id/btn_buscar" android:layout_width="match_parent"
             android:layout_height="wrap_content" android:layout_marginLeft="62dp"
             android:layout_marginRight="100dp" android:layout_marginTop="140dp"
-            android:text="Buscar"  android:textColor="#fff" android:shadowColor="#2314A8"
-            android:shadowDx="-3" android:shadowDy="0" android:shadowRadius="8"
+            android:text="Buscar"  android:textColor="#fff"
             android:drawableStart="@drawable/ic_buscar" android:paddingLeft="10dp"
             android:drawablePadding="0dp"/>
 
@@ -29,7 +28,7 @@
         <TextView android:id="@+id/tv_close" android:layout_width="30dp"
                   android:layout_height="wrap_content" android:layout_marginLeft="10dp"
                   android:layout_marginTop="10dp" android:layout_marginBottom="25dp"
-                  android:textColor="#FF0000" android:text="X" android:textAlignment="center"
+                  android:textColor="#FFF" android:text="X" android:textAlignment="center"
                   android:textSize="20dp" android:background="@drawable/circulo1"
                   android:layout_marginRight="10dp"/>
     </LinearLayout>

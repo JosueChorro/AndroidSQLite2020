@@ -12,6 +12,12 @@ public class Dto implements Serializable {
 
     }
 
+    public Dto(int codigo, String descripcion, double precio) {
+        this.codigo = codigo;
+        this.descripcion = descripcion;
+        this.precio = precio;
+    }
+
     public int getCodigo() {
         return codigo;
     }

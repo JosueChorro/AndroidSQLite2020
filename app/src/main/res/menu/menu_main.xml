@@ -14,4 +14,7 @@
     <item
             android:id="@+id/action_listarArticulos1"
             android:title="@string/listardos" />
+    <item
+            android:id="@+id/recycler"
+            android:title="Listado Recycler" />
 </menu>

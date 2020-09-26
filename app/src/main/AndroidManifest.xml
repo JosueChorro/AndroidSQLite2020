@@ -4,23 +4,28 @@
 
     <application
             android:allowBackup="true"
-            android:icon="@mipmap/ic_launcher"
+            android:icon="@mipmap/ic_icono"
             android:label="@string/app_name"
-            android:roundIcon="@mipmap/ic_launcher_round"
+            android:roundIcon="@mipmap/ic_icono"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".ConsultaRecyclerView">
+        </activity>
         <activity android:name=".DetallesArticulos">
         </activity>
-        <activity android:name=".ListViewArticulos" android:configChanges="screenSize|orientation"
-                  android:windowSoftInputMode="stateHidden">
+        <activity
+                android:name=".ListViewArticulos"
+                android:configChanges="screenSize|orientation"
+                android:windowSoftInputMode="stateHidden">
         </activity>
         <activity android:name=".ConsultaSpinner">
         </activity>
         <activity
                 android:name=".MainActivity"
+                android:configChanges="screenSize|orientation"
                 android:label="@string/app_name"
-                android:configChanges="screenSize|orientation" android:windowSoftInputMode="stateHidden"
-                android:theme="@style/AppTheme.NoActionBar">
+                android:theme="@style/AppTheme.NoActionBar"
+                android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
