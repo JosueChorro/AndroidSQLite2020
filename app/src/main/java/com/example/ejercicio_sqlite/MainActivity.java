@@ -6,7 +6,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -18,6 +17,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.getbase.floatingactionbutton.FloatingActionButton;
+import com.getbase.floatingactionbutton.FloatingActionsMenu;
 import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
@@ -80,14 +81,44 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        final FloatingActionsMenu fab = findViewById(R.id.fab);
+        final FloatingActionButton fab1 = findViewById(R.id.item1);
+        final FloatingActionButton fab2 = findViewById(R.id.item2);
+        final FloatingActionButton fab3 = findViewById(R.id.item3);
+        final FloatingActionButton fab4 = findViewById(R.id.item4);
+        final FloatingActionButton fab5 = findViewById(R.id.item5);
+        fab1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                // .setAction("Action", null).show();
+                confirmacion();
+            }
+        });
+
+        fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 ventanas.Search(MainActivity.this);
-                //MainActivity.this.finish();
+            }
+        });
+
+        fab3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                consultapordescripcion();
+            }
+        });
+
+        fab4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                modificacion();
+            }
+        });
+
+        fab5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                bajaporcodigo();
             }
         });
 
@@ -95,10 +126,6 @@ public class MainActivity extends AppCompatActivity {
         et_descripcion = (EditText) findViewById(R.id.content_descripcion);
         et_precio = (EditText) findViewById(R.id.content_precio);
         btn_guardar = (Button) findViewById(R.id.btn_guardar);
-        btn_consultar1 = (Button) findViewById(R.id.btn_consultar1);
-        btn_consultar2 = (Button) findViewById(R.id.btn_consultar2);
-        btn_eliminar = (Button) findViewById(R.id.btn_eliminar);
-        btn_actualizar = (Button) findViewById(R.id.btn_actualizar);
         //tv resultado —— (TextView) findViewByld(R.id.tv resultado),’
         String senal = "";
         String codigo = "";
@@ -229,7 +256,7 @@ public class MainActivity extends AppCompatActivity {
         et_codigo.requestFocus();
     }
 
-    public void consultaporcodigo(View v) {
+    public void consultaporcodigo() {
         if (et_codigo.getText().toString().length() == 0) {
             et_codigo.setError("Campo obligatorio");
             inputEt = false;
@@ -252,7 +279,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void consultapordescripcion(View v) {
+    public void consultapordescripcion() {
         if (et_descripcion.getText().toString().length() == 0) {
             et_descripcion.setError("Campo obligatorio");
             inputEd = false;
@@ -275,7 +302,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void bajaporcodigo(View v) {
+    public void bajaporcodigo() {
         if (et_codigo.getText().toString().length() == 0) {
             et_codigo.setError("campo obligatorio");
             inputEt = false;
@@ -294,7 +321,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void modificacion(View v) {
+    public void modificacion() {
         if (et_codigo.getText().toString().length() == 0) {
             et_codigo.setError("campo obligatorio");
             inputEt = false;

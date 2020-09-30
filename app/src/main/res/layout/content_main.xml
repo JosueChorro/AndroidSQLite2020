@@ -46,41 +46,6 @@
                         android:onClick="alta" android:background="#2e4053"
                         android:drawableRight="@drawable/ic_guardar"
                         android:paddingRight="100dp" android:drawablePadding="-140dp"/>
-
-                <Button android:id="@+id/btn_consultar1" android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:layout_marginLeft="15dp"
-                        android:layout_marginRight="15dp" android:layout_marginTop="5dp"
-                        android:text="Consultar por codigo" android:textColor="#fff"
-                        android:onClick="consultaporcodigo"
-                        android:background="#2e4053"
-                        android:drawableStart="@drawable/ic_buscar" android:paddingLeft="80dp"
-                        android:drawablePadding="-40dp"/>
-
-                <Button android:id="@+id/btn_consultar2" android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:layout_marginLeft="15dp"
-                        android:layout_marginRight="15dp" android:layout_marginTop="5dp"
-                        android:text="Consultar por descricion" android:textColor="#fff"
-                        android:onClick="consultapordescripcion" android:background="#2e4053"
-                        android:drawableStart="@drawable/ic_buscar" android:paddingLeft="80dp"
-                        android:drawablePadding="-40dp"/>
-
-                <Button android:id="@+id/btn_eliminar" android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:layout_marginLeft="15dp"
-                        android:layout_marginRight="15dp" android:layout_marginTop="5dp"
-                        android:text="Borrar"  android:textColor="#fff"
-                        android:onClick="bajaporcodigo" android:background="#2e4053"
-                        android:drawableStart="@drawable/ic_borrar"
-                        android:paddingLeft="80dp" android:drawablePadding="-40dp"
-                />
-
-                <Button android:id="@+id/btn_actualizar" android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:layout_marginLeft="15dp"
-                        android:layout_marginRight="15dp" android:layout_marginTop="5dp"
-                        android:layout_marginBottom="20dp" android:text="Editar"
-                        android:textColor="#fff" android:onClick="modificacion"
-                        android:background="#2e4053"
-                        android:drawableStart="@drawable/ic_editar" android:paddingLeft="80dp"
-                        android:drawablePadding="-40dp"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

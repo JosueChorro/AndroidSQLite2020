@@ -2,6 +2,7 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:fab="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,11 +24,40 @@
 
     <include layout="@layout/content_main"/>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
-            android:layout_margin="@dimen/fab_margin"
-            android:src="@drawable/ic_buscar" />
+            android:layout_margin="@dimen/fab_margin">
+        <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/item1" app:fab_colorNormal="#ff0000" android:tint="#fff"
+                android:layout_width="wrap_content" app:fab_icon="@drawable/ic_salir"
+                android:layout_height="wrap_content" app:fab_size="mini"
+        />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/item2" app:fab_colorNormal="@color/colorAccent" android:tint="#fff"
+                android:layout_width="wrap_content" app:fab_icon="@drawable/ic_buscar"
+                android:layout_height="wrap_content" app:fab_size="mini" app:fab_title="Codigo"
+        />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/item3" app:fab_colorNormal="#2e4053" android:tint="#fff"
+                android:layout_width="wrap_content" app:fab_icon="@drawable/ic_buscar"
+                android:layout_height="wrap_content" app:fab_size="mini" app:fab_title="Descripcion"
+        />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/item4" app:fab_colorNormal="#FFF30E" android:tint="#fff"
+                android:layout_width="wrap_content" app:fab_icon="@drawable/ic_editar"
+                android:layout_height="wrap_content" app:fab_size="mini" app:fab_title="Editar"
+        />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/item5" app:fab_colorNormal="#ff0000" android:tint="#fff"
+                android:layout_width="wrap_content" app:fab_icon="@drawable/ic_borrar"
+                android:layout_height="wrap_content" app:fab_size="mini" app:fab_title="Eliminar"
+        />
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
