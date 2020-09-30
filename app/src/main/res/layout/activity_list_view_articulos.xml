@@ -2,18 +2,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent" android:layout_height="match_parent"
-                tools:context=".ListViewArticulos">
+                tools:context=".ListViewArticulos" android:background="#FFFFFF">
 
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                   android:layout_gravity="center" android:gravity="center"
-                  android:background="#E01515" android:orientation="vertical">
+                  android:background="#283593" android:orientation="vertical">
 
         <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
                   android:text="LlSTADO DE ARTICULOS REGISTRADOS"
                   android:fontFamily="serif-monospace" android:textAlignment="center"
-                  android:textSize="16dp" android:textStyle="bold" android:textColor="#000"
+                  android:textSize="16dp" android:textStyle="bold" android:textColor="#FFFFFF"
                   android:paddingTop="5dp" android:paddingBottom="5dp"
-                  android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                  android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
 
         <SearchView
                 android:id="@+id/searchView" android:layout_width="match_parent"
@@ -31,7 +31,7 @@
               android:layout_alignParentEnd="true" android:layout_alignParentLeft="true"
               android:layout_alignParentRight="true" android:layout_alignParentStart="true"
               android:layout_gravity="center" android:text="Copyright (c) Jc_aries . \nAll rights reserved."
-              android:textColor="#000" android:textSize="12sp"
+              android:textColor="#FFFFFF" android:textSize="12sp"
               android:textStyle="bold" android:elevation="4dp"
-              android:background="#E01515" android:textAlignment="center" android:layout_marginTop="10dp"/>
+              android:background="#283593" android:textAlignment="center" android:layout_marginTop="10dp"/>
 </RelativeLayout>

@@ -10,11 +10,16 @@
             app:showAsAction="never" />
     <item
             android:id="@+id/action_listarArticulos"
-            android:title="@string/listar" />
+            android:title="@string/listar"
+            android:icon="@drawable/ic_drop"
+            app:showAsAction="always"/>
     <item
             android:id="@+id/action_listarArticulos1"
-            android:title="@string/listardos" />
+            android:title="@string/listardos"
+            android:icon="@drawable/ic_listaview"
+            app:showAsAction="always" />
     <item
             android:id="@+id/recycler"
-            android:title="Listado Recycler" />
+            android:title="Listado Recycler"
+            app:showAsAction="never" />
 </menu>
