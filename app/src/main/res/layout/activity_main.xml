@@ -37,6 +37,12 @@
         />
 
         <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/item6" app:fab_colorNormal="#80CCFD" android:tint="#fff"
+                android:layout_width="wrap_content" app:fab_icon="@android:drawable/ic_dialog_info"
+                android:layout_height="wrap_content" app:fab_size="mini"
+        />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
                 android:id="@+id/item2" app:fab_colorNormal="@color/colorAccent" android:tint="#fff"
                 android:layout_width="wrap_content" app:fab_icon="@drawable/ic_buscar"
                 android:layout_height="wrap_content" app:fab_size="mini" app:fab_title="Codigo"

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:orientation="vertical"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Acerca">
+
+
+    <Space
+            android:layout_width="match_parent"
+            android:layout_height="21dp"/>
+    <TextView
+            android:text="Aplicacion creada por: "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView" android:textColor="#000"
+            android:textSize="24sp" android:textStyle="bold" android:textAlignment="center"/>
+    <Space
+            android:layout_width="match_parent"
+            android:layout_height="29dp"/>
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical">
+            <TextView
+                    android:text="Josue Carlos Hernandez Chorro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/txt" android:textAlignment="center"
+                    android:textStyle="bold" android:textColor="#000" android:textSize="18sp"/>
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"/>
+            <TextView
+                    android:text="Sistemas 21 A"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textAlignment="center" android:textStyle="bold"
+                    android:textColor="#000"/>
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"/>
+
+            <ImageView
+                    android:src="@mipmap/ic_launcher_foreground"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/imageView2"/>
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"/>
+            <TextView
+                    android:text="2020 - Jc_aries"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textAlignment="center" android:fontFamily="cursive"/>
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"/>
+
+            <ImageView
+                    android:src="@mipmap/ic_aries"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/imageView" app:tint="@color/barra"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

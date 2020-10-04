@@ -9,6 +9,8 @@
             android:roundIcon="@mipmap/ic_icono"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".Acerca">
+        </activity>
         <activity android:name=".ConsultaRecyclerView">
         </activity>
         <activity android:name=".DetallesArticulos">

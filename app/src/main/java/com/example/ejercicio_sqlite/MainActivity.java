@@ -87,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
         final FloatingActionButton fab3 = findViewById(R.id.item3);
         final FloatingActionButton fab4 = findViewById(R.id.item4);
         final FloatingActionButton fab5 = findViewById(R.id.item5);
+        final FloatingActionButton fab6 = findViewById(R.id.item6);
         fab1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -119,6 +120,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 bajaporcodigo();
+            }
+        });
+
+        fab6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, Acerca.class);
+                startActivity(i);
             }
         });
 

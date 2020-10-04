@@ -1,5 +1,7 @@
 package com.example.ejercicio_sqlite;
 
+import android.content.Intent;
+import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -43,5 +45,11 @@ public class DetallesArticulos extends AppCompatActivity {
         SimpleDateFormat dateFormat = new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss a", Locale.getDefault());
         Date date = new Date();
         return dateFormat.format(date);
+    }
+
+    public void report(View v){
+        Intent i = new Intent(DetallesArticulos.this, ListViewArticulos.class);
+        startActivity(i);
+        finishAffinity();
     }
 }

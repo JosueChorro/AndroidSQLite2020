@@ -1,5 +1,7 @@
 package com.example.ejercicio_sqlite;
 
+import android.content.DialogInterface;
+import android.view.KeyEvent;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,6 +25,17 @@ public class ListViewArticulos extends AppCompatActivity {
             "Jelly Bean","Kitkat","Lolipop","Marshmallow","Nought","Oreo"};
     Base conexion = new Base(this);
     Dto datos = new Dto();
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            Intent i = new Intent(ListViewArticulos.this, MainActivity.class);
+            startActivity(i);
+            finishAffinity();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
     @Override
     protected void onCreate(Bundle savedlnstancestate) {
